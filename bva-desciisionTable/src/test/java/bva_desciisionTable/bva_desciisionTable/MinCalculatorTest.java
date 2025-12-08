@@ -1,5 +1,6 @@
 package bva_desciisionTable.bva_desciisionTable;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 public class MinCalculatorTest {
@@ -34,4 +35,48 @@ public class MinCalculatorTest {
 	        // assert
 	        assertEquals(10, result);   // 1 הוא הערך המינימלי
 	    }
-}
+	@Test
+    void testB_ValueZero_ShouldThrowException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            MinCalculator.findMin(50, 0, 50, 50, 50);
+        });
+    }
+
+    @Test
+    void testB_ValueOne_ShouldReturnOne() {
+        int result = MinCalculator.findMin(50, 1, 50, 50, 50);
+        assertEquals(1, result);
+    }
+
+    @Test
+    void testB_ValueTwo_ShouldReturnTwo() {
+        int result = MinCalculator.findMin(50, 2, 50, 50, 50);
+        assertEquals(2, result);
+    }
+
+    @Test
+    void testB_Value500_ShouldReturnFifty() {
+        int result = MinCalculator.findMin(50, 500, 50, 50, 50);
+        assertEquals(50, result);
+    }
+
+    @Test
+    void testB_Value999_ShouldReturnFifty() {
+        int result = MinCalculator.findMin(50, 999, 50, 50, 50);
+        assertEquals(50, result);
+    }
+
+    @Test
+    void testB_Value1000_ShouldReturnFifty() {
+        int result = MinCalculator.findMin(50, 1000, 50, 50, 50);
+        assertEquals(50, result);
+    }
+
+    @Test
+    void testB_Value1001_ShouldThrowException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            MinCalculator.findMin(50, 1001, 50, 50, 50);
+        });
+		
+	
+	}}
