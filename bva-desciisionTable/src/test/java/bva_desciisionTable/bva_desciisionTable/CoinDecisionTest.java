@@ -1,5 +1,4 @@
 package bva_desciisionTable.bva_desciisionTable;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 

@@ -36,44 +36,44 @@ public class MinCalculatorTest {
 	        assertEquals(10, result);   // 1 הוא הערך המינימלי
 	    }
 	@Test
-    void testB_ValueZero_ShouldThrowException() {
+    void testB_Min_1() {
         assertThrows(IllegalArgumentException.class, () -> {
             MinCalculator.findMin(50, 0, 50, 50, 50);
         });
     }
 
     @Test
-    void testB_ValueOne_ShouldReturnOne() {
+    void testB_Min() {
         int result = MinCalculator.findMin(50, 1, 50, 50, 50);
         assertEquals(1, result);
     }
 
     @Test
-    void testB_ValueTwo_ShouldReturnTwo() {
+    void testB_Plus_1() {
         int result = MinCalculator.findMin(50, 2, 50, 50, 50);
         assertEquals(2, result);
     }
 
     @Test
-    void testB_Value500_ShouldReturnFifty() {
+    void testB_Nominal() {
         int result = MinCalculator.findMin(50, 500, 50, 50, 50);
         assertEquals(50, result);
     }
 
     @Test
-    void testB_Value999_ShouldReturnFifty() {
+    void testB_Max_min_1() {
         int result = MinCalculator.findMin(50, 999, 50, 50, 50);
         assertEquals(50, result);
     }
 
     @Test
-    void testB_Value1000_ShouldReturnFifty() {
+    void testB_Max() {
         int result = MinCalculator.findMin(50, 1000, 50, 50, 50);
         assertEquals(50, result);
     }
 
     @Test
-    void testB_Value1001_ShouldThrowException() {
+    void testB_Max_Plus_1() {
         assertThrows(IllegalArgumentException.class, () -> {
             MinCalculator.findMin(50, 1001, 50, 50, 50);
         });
